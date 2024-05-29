@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+}
+
+.chessboard {
+    width: 500px;
+    height: 500px;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    transition: all ease-in-out 1s;
+}
+
+.square {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1px;
+}
+
+.dark {
+    background-color: #6e8b50;
+}
+
+.light {
+    background-color: #eeeed2;
+}
+
+.piece {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: grab;
+    font-size: 42px;
+}
+
+.white {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.black {
+    color: black;
+}
+
+.flipped, .piece {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 515px) {
+    .chessboard {
+        width: 400px;
+        height: 400px;
+    }
+
+    .piece {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 410px) {
+    .chessboard {
+        width: 350px;
+        height: 350px;
+    }
+
+    .piece {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 358px) {
+    .chessboard {
+        width: 300px;
+        height: 300px;
+    }
+
+    .piece {
+        font-size: 25px;
+    }
+}
